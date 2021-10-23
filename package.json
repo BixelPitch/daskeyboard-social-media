@@ -1,0 +1,79 @@
+{
+  "name": "daskeyboard-applet--social-media",
+  "repository": "https://github.com/BixelPitch/daskeyboard-social-media.git",
+  "author": "BixelPitch <hannes@bixelspace.de>",
+  "displayName": "Social Media",
+  "version": "1.0.0",
+  "description": "Get notified when you gain/lose followers.",
+  "longDescription": "Get notified when you gain/lose followers.",
+  "officialProductName": "Social Media",
+  "appUrl": "https://github.com/BixelPitch/daskeyboard-social-media",
+  "isSingleton": false,
+  "videoUrl": "",
+  "icon": "assets/icon.png",
+  "image": "",
+  "publisher": "BixelPitch",
+  "authorName": "BixelPitch",
+  "authorUrl": "https://github.com/BixelPitch",
+  "issuesUrl": "https://github.com/BixelPitch/daskeyboard-social-media/issues",
+  "homePageUrl": "https://github.com/BixelPitch/daskeyboard-social-media",
+  "developerRepoUrl": "https://github.com/BixelPitch/daskeyboard-social-media",
+  "licenseUrl": "https://github.com/BixelPitch/daskeyboard-social-media/blob/main/LICENSE",
+  "changelogUrl": "CHANGELOG.md",
+  "license": "MIT",
+  "readMeUrl": "README.md",
+  "readMeEndUserUrl": "README_ENDUSER.md",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "das-keyboard-q": "3.0.0"
+  },
+  "dependencies": {
+    "daskeyboard-applet": "^2.11.5",
+    "node-fetch": "^2.6.5"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.2"
+  },
+  "qConfig": {
+    "geometry": {
+      "width": 1,
+      "height": 1,
+      "defaults": {
+        "origin": {
+          "x": 0,
+          "y": 1
+        }
+      }
+    }
+  },
+  "questions": [
+    {
+      "key": "platform",
+      "label": "Select the social media platform of your choice",
+      "required": true,
+      "order": 1,
+      "controlType": "dropdown",
+      "value": "instagram",
+      "valueLabel": "Instagram",
+      "options": [
+        {
+          "key": "instagram",
+          "value": "Instagram"
+        }
+      ]
+    },
+    {
+      "key": "username",
+      "label": "Your username",
+      "placeholder": "therock",
+      "required": true,
+      "order": 2,
+      "controlType": "textbox"
+    }
+  ]
+}
