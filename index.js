@@ -1,5 +1,6 @@
 const q = require('daskeyboard-applet');
 const Instagram = require('./platforms/Instagram');
+const DevRant = require('./platforms/DevRant');
 
 const { logger } = q;
 const COLORS = Object.freeze({
@@ -23,6 +24,9 @@ class SocialMediaApplet extends q.DesktopApp {
         switch (platform) {
         case 'instagram':
             this.platform = new Instagram(username);
+            break;
+        case 'devrant':
+            this.platform = new DevRant(username);
             break;
         default:
             logger.error('Platform not recognized!');

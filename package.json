@@ -64,6 +64,10 @@
         {
           "key": "instagram",
           "value": "Instagram"
+        },
+        {
+          "key": "devrant",
+          "value": "DevRant"
         }
       ]
     },
