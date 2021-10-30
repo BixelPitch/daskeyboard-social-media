@@ -2,12 +2,12 @@ const q = require('daskeyboard-applet');
 const Instagram = require('./platforms/Instagram');
 
 const { logger } = q;
-const COLORS = {
+const COLORS = Object.freeze({
     increase: '#00FF00',
     decrease: '#FF0000',
     polling: '#0000FF',
     badConfig: '#FF0000',
-};
+});
 
 class SocialMediaApplet extends q.DesktopApp {
     constructor() {
@@ -15,6 +15,10 @@ class SocialMediaApplet extends q.DesktopApp {
         this.pollingInterval = 1 * 60 * 1000;
         this.followers = null;
         const { username, platform } = this.config;
+
+        if (!username && username.length === 0) {
+            throw new Error('No username specified!');
+        }
 
         switch (platform) {
         case 'instagram':
